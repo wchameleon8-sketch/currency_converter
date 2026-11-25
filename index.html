@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Currency converter</h1>
+
+    <label class="field">
+      <span>Amount</span>
+      <input id="amount" type="number" inputmode="decimal" min="0" step="any" value="100">
+    </label>
+
+    <div class="pair">
+      <label class="field">
+        <span>From</span>
+        <select id="from"></select>
+      </label>
+      <button id="swap" type="button" aria-label="Swap currencies">⇅</button>
+      <label class="field">
+        <span>To</span>
+        <select id="to"></select>
+      </label>
+    </div>
+
+    <section class="result" aria-live="polite">
+      <p id="result" class="big">–</p>
+      <p id="rate" class="muted"></p>
+      <p id="updated" class="muted"></p>
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <footer>Rates are indicative only, not for trading.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
